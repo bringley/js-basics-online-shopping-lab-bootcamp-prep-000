@@ -42,7 +42,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var index = 0
+  var index = -1
   for (let i = 0; i < cart.length; i++) {
     index = index + 1
   }
