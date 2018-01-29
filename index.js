@@ -45,15 +45,15 @@ function removeFromCart(item) {
   var i = 0
   var inCart = 0
   //account for empty cart
-  if cart.length === 0 {
+  if (cart.length === 0) {
     var msg = 'That item is not in your cart.'
   } else {
     do {
-      var inCart = inCart + cart[i].hasOwnProperty(item)
+      inCart = inCart + cart[i].hasOwnProperty(item)
       i = i + 1
     } while (inCart < 1)
     if (i === cart.length && inCart < 1) {
-      var msg = 'That item is not in your cart.'
+      msg = 'That item is not in your cart.'
     } else {
       cart.splice(i - 1, 1)
     }
