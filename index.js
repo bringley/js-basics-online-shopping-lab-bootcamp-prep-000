@@ -51,7 +51,7 @@ function removeFromCart(item) {
   if (i === cart.length && inCart < 1) {
     var msg = 'That item is not in your cart.'
   } else {
-    
+    cart.splice(i - 1, 1)
   }
   console.log(msg)
   return cart
