@@ -38,7 +38,12 @@ function viewCart() {
   } else if (cart.length === 1) {
     msg = msg + ` ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`
   } else if (cart.length === 2) {
-    msg = msg + ` ${Object.keys(cart[0])} at $${Object.values(cart[0])} and .`
+    msg = msg + ` ${Object.keys(cart[0])} at $${Object.values(cart[0])} and ${Object.keys(cart[1])} at $${Object.values(cart[1])}.`
+  } else {
+    for (let i = 0; i < cart.length - 1; i++) {
+      msg = msg + ` ${Object.keys(cart[i])} at $${Object.values(cart[i])},`
+    }
+    msg = msg + ` and ${Object.keys(cart[cart.length])} at $${Object.values(cart[cart.length])}.`
   }
   console.log(msg)
 }
