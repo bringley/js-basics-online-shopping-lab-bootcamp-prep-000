@@ -42,11 +42,11 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var inCart = 0
+  var index = 0
   for (let i = 0; i < cart.length; i++) {
-    inCart = inCart = cart[i].hasOwnProperty(item)
+    index = index + 1
   }
-  if (inCart < 1) {
+  if (index === cart.length) {
     msg = 'That item is not in your cart.'
   } else {
     
