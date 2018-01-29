@@ -44,15 +44,19 @@ function total() {
 function removeFromCart(item) {
   var i = 0
   var inCart = 0
-  do {
-    var inCart = inCart + cart[i].hasOwnProperty(item)
-    i = i + 1
-  } while (inCart < 1)
-  if (i === cart.length && inCart < 1) {
+  //account for empty cart
+  if cart.length === 0 {
     var msg = 'That item is not in your cart.'
   } else {
-    cart.splice(i - 1, 1)
-  }
+    do {
+      var inCart = inCart + cart[i].hasOwnProperty(item)
+      i = i + 1
+    } while (inCart < 1)
+    if (i === cart.length && inCart < 1) {
+      var msg = 'That item is not in your cart.'
+    } else {
+      cart.splice(i - 1, 1)
+    }
   console.log(msg)
   return cart
 }
