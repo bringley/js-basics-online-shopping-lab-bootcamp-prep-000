@@ -44,7 +44,8 @@ function total() {
 function removeFromCart(item) {
   var i = 0
   do {
-    cart[i].
+    var inCart = cart[i].hasOwnProperty(item)
+    i = i + inCart
   }cart
   for (let i = 0; i < cart.length; i++) {
     index = index + 1
