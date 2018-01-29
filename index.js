@@ -38,8 +38,9 @@ function viewCart() {
   } else if (cart.length === 1) {
     msg = msg + ` ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`
   } else if (cart.length === 2) {
-    
+    msg = msg + ` ${Object.keys(cart[0])} at $${Object.values(cart[0])} and .`
   }
+  console.log(msg)
 }
 
 function total() {
