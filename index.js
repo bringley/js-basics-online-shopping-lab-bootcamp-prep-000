@@ -42,7 +42,16 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  var inCart = 0
+  for (let i = 0; i < cart.length; i++) {
+    inCart = inCart = cart[i].hasOwnProperty(item)
+  }
+  if (inCart < 1) {
+    msg = 'That item is not in your cart.'
+  } else {
+    
+  }
+  return msg
 }
 
 function placeOrder(cardNumber) {
