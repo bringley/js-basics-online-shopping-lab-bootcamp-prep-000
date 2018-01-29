@@ -16,7 +16,7 @@ function addToCart(name) {
   return cart
 }
 
-function viewCart() {
+/*function viewCart() {
   var msg = 'In your cart, you have'
   if (cart.length === 0){
     msg = 'Your shopping cart is empty.'
@@ -29,6 +29,17 @@ function viewCart() {
       msg = msg + ` and ${Object.keys(cart[cart.length - 1])} at $${Object.values(cart[cart.length - 1])}.`
     }
   console.log(msg)
+}*/
+
+function viewCart() {
+  var msg = 'In your cart, you have'
+  if (cart.length === 0){
+    msg = 'Your shopping cart is empty.'
+  } else if (cart.length === 1) {
+    msg = msg + ` ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`
+  } else if (cart.length === 2) {
+    
+  }
 }
 
 function total() {
