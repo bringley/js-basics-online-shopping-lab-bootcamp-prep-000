@@ -43,7 +43,7 @@ function viewCart() {
     for (let i = 0; i < cart.length - 1; i++) {
       msg = msg + ` ${Object.keys(cart[i])} at $${Object.values(cart[i])},`
     }
-    msg = msg + ` and ${Object.keys(cart[cart.length])} at $${Object.values(cart[cart.length])}.`
+    msg = msg + ` and ${Object.keys(cart[cart.length - 1])} at $${Object.values(cart[cart.length - 1])}.`
   }
   console.log(msg)
 }
